@@ -1,0 +1,31 @@
+name: Build Mac App
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install pyinstaller
+
+    - name: Build app
+      run: |
+        pyinstaller --onefile --windowed --name FinanceReview tikumain_v3.0.py
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: FinanceReview-Mac
+        path: dist/FinanceReview.app
