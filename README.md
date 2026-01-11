@@ -39,7 +39,7 @@
 
 ---
 
-## 使用流传
+## 使用流程
 <p align="center">
   <img src="images/workflow.png" width="600">
 </p>
