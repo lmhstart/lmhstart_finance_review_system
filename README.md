@@ -39,6 +39,13 @@
 
 ---
 
+## 使用流传
+<p align="center">
+  <img src="images/workflow.png" width="600">
+</p>
+
+ ---
+
 ## 📸 软件截图
 
 <p align="center">
